@@ -17,7 +17,7 @@ def get_guess(word):
     print_word_with_blanks(word)
     print('Lives remaining:', lives_remaining)
     guess = input(' Guess a letter or a whole word?')
-    return(guess)
+    return(guess.lower())
 
 
 def print_word_with_blanks(word):
@@ -28,12 +28,12 @@ def print_word_with_blanks(word):
             display_word = display_word + letter
         else:
             # letter not found
-            display_word = display_word + '_'
+            display_word = display_word + '-'
     print(display_word)
 
 
 def process_guess(guess, word):
-    if len(guess) > 1:
+    if len(guess) == len(word):
         return whole_word_guess(guess, word)
     else:
         return single_letter_guess(guess, word)
