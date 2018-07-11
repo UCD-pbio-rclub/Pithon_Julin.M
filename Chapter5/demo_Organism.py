@@ -24,6 +24,8 @@ Bnapus = LongOrganism(kingdom='Plantae',
                            genome_size=1200,
                            chromosomes=19)
 
-print(Arabidopsis.latin_name())
+print('The latin name of Arabidopsis is', Arabidopsis.latin_name())
+
+print(Bnapus.latin_name(), 'has', Bnapus.chromosomes, 'chromosomes')
 
 Arabidopsis.compare(Bnapus)

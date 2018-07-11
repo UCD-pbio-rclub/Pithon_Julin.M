@@ -11,15 +11,6 @@ class LongOrganism(organism.Organism):
         self.genome_size = genome_size
         self.chromosomes = chromosomes
 
-    def ploidy(self):
-        return self.ploidy
-
-    def genome_size(self):
-        return self.genome_size
-
-    def chromosomes(self):
-        return self.chromosomes
-
     def compare(self, other):  # compare this organism to another
         if self.chromosomes > other.chromosomes:
             print(self.latin_name(), 'has more chromosomes than',
