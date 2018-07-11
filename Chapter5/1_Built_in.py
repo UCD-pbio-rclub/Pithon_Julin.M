@@ -4,9 +4,9 @@
 import statistics
 import random
 
-print 'Demo of the statistics module'
+print('Demo of the statistics module')
 
-print 'Will generate a set of random numbers and then compute descriptive statistics'
+print('Will generate a set of random numbers and then compute descriptive statistics')
 
 numbers = []
 
