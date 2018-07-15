@@ -2,7 +2,17 @@
 
 import random
 
-words = ['chicken', 'dog', 'cat', 'mouse', 'frog']
+# words = ['chicken', 'dog', 'cat', 'mouse', 'frog']
+
+# now read in file as shown in chapter 6
+words_file = 'hangman_words.txt'
+try:
+    f = open(words_file)
+    words = f.read().splitlines()
+    f.close()
+except IOError:
+    print('Cannot open file: ' + words_file)
+    exit()
 
 lives_remaining = 14
 
@@ -16,7 +26,7 @@ def pick_a_word():
 def get_guess(word):
     print_word_with_blanks(word)
     print('Lives remaining:', lives_remaining)
-    guess = input(' Guess a letter or a whole word?')
+    guess = input(' Guess a letter or a whole word? ')
     return(guess.lower())
 
 
